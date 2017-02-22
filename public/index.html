@@ -28,12 +28,14 @@
 
     <!-- Top nav bar (fixed) -->
     <nav id="nav-bar">
+
       <img class="logo" src="/images/bird.png">
+      <input type="button"  class="compose" value="Compose"/>
       <span class="header">Preeker the fake Tweeter </span>
     </nav>
 
     <!-- Page-specific (main) content here -->
-    <main class="container" id="tweets-container">
+    <main class="container">
       <section class="new-tweet">
         <h2>Compose Preek</h2>
         <form>
@@ -44,6 +46,7 @@
         </form>
       </section>
 
+      <section id = "tweets-container">
       <article class="tweet">
 
         <header>
@@ -63,7 +66,7 @@
           <span class="timing"> 10 days ago</span>
         </footer>
       </article>
-
+      </section>
 
 
     </main>

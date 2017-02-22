@@ -24,3 +24,15 @@
   font-size: 20px;
   line-height: 80px;
 }
+
+#nav-bar:hover .compose{
+  background-color:#FFFFFF;
+}
+
+#nav-bar .compose{
+  margin-top: 5px;
+  float: right;
+  background-color:#C1FFC1;
+  height: 70px;
+  border-radius: 15%
+}
