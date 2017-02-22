@@ -16,7 +16,7 @@
        "handle": "@SirIsaac"
      },
      "content": {
-       "text": "<script>alert('uh oh!');</script>"
+       "text": "It's raining apples!"
      },
      "created_at": 1461116232227
    },
@@ -74,8 +74,12 @@ $(document).ready(function(){
     ${escape(tweet.content.text)}
     </p>
     <footer>
-      <i class="material-icons">favorite</i>
     <span class="timing">${tweet.created_at}</span>
+    <div class= "icons">
+      <i class="fa fa-flag"></i>
+      <i class="fa fa-retweet"></i>
+      <i class="fa fa-heart"></i>
+    </div>
     </footer>
   </article>`
   return output;

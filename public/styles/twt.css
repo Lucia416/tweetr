@@ -6,6 +6,9 @@ article {
   margin-top: 40px;
 
 }
+article:hover .icons {
+  display: block;
+}
 
 .photo{
   height: 50px;
@@ -20,9 +23,19 @@ footer{
 
 }
 
-.material-icons{
-  float:right;
+.icons {
+  display: none;
+  float: right;
+  color: #00CED1;
 }
+
+/*.icons:hover {
+
+  float:right;
+  visibility: visible;
+
+
+}*/
 .timing {
   font-size: 15px;
   font-style: italic;
