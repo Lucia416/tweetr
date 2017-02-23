@@ -1,6 +1,7 @@
 
 section.new-tweet {
-  background-color: #eee;
+  display: none;
+  background-color: #FFC0CB;
   border: 1px solid #BABABA;
   border-radius: 3.5%;
   margin-top: 30px;

@@ -58,10 +58,16 @@ $(document).ready(function(){
   loadTweets();
   $(".new-tweet form").on('submit', (ev) =>{
     ev.preventDefault();
-    if (!$(".new-tweet textarea").val()){
+    let text = $(ev.target).find('textarea').val();
+    if (!text.length){
       alert("Are you shy? Share with me!");
       return;
+    } else if (text.length > 140){
+      alert("Wow, you talk a lot!");
+      return;
     }
+
+
 
     // const data_obj = {}  ;
     // $('.new-tweet form').serializeArray().forEach((elm) => {
@@ -75,6 +81,7 @@ $(document).ready(function(){
     })
     .done((new_post) => {
       $(".new-tweet form").find("input[type=text],textarea").val('');
+      $('.new-tweet .counter').text(140);
       loadTweets();
     })
   })
@@ -84,6 +91,32 @@ $(document).ready(function(){
    });
 });
 
+  function timeDifference(current, previous) {
+   let msPerMinute = 60 * 1000;
+   let msPerHour = msPerMinute * 60;
+   let msPerDay = msPerHour * 24;
+   let msPerMonth = msPerDay * 30;
+   let msPerYear = msPerDay * 365;
+   let elapsed = current - previous;
+   if (elapsed < msPerMinute) {
+       return Math.round(elapsed/1000) + ' seconds ago';
+   }
+   else if (elapsed < msPerHour) {
+       return Math.round(elapsed/msPerMinute) + ' minutes ago';
+   }
+   else if (elapsed < msPerDay ) {
+       return Math.round(elapsed/msPerHour ) + ' hours ago';
+   }
+   else if (elapsed < msPerMonth) {
+      return Math.round(elapsed/msPerDay) + ' days ago';
+   }
+   else if (elapsed < msPerYear) {
+      return Math.round(elapsed/msPerMonth) + ' months ago';
+   }
+   else {
+      return Math.round(elapsed/msPerYear ) + ' years ago';
+   }
+  }
 
 
 
@@ -99,7 +132,7 @@ function createTweetElement(tweet) {
     ${escape(tweet.content.text)}
     </p>
     <footer>
-    <span class="timing">${tweet.created_at}</span>
+    <span class="timing">${timeDifference(Date.now(),tweet.created_at)}</span>
     <div class= "icons">
       <i class="fa fa-flag"></i>
       <i class="fa fa-retweet"></i>
