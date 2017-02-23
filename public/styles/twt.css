@@ -10,6 +10,8 @@ article:hover .icons {
   display: block;
 }
 
+
+
 .photo{
   height: 50px;
   width: 50px;
@@ -18,12 +20,14 @@ article:hover .icons {
   float:left;
 }
 footer{
+  padding-left: 0.5em;
   border-top: 1px solid #eee;
   height:20px;
 
 }
 
 .icons {
+  padding-right: 0.5em;
   display: none;
   float: right;
   color: #00CED1;
@@ -50,7 +54,9 @@ footer{
 }
 
 header{
+  border-bottom: 1px solid #eee;
   background-color: #FFC0CB;
+  border-radius: 4%;
   height:60px;
 
 }

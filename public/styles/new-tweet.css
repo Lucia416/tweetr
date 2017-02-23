@@ -10,7 +10,9 @@ section.new-tweet {
 
 }
 
-
+p{
+  padding: 1em;
+}
 
 h2 {
     border-bottom: 1px solid black;
