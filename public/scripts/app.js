@@ -24,7 +24,7 @@ $(document).ready(function(){
   })
   $(".compose").click(function(){
      $('.new-tweet').slideToggle(600);
-     $('#tweets-container').focus();
+     $('#text').focus();
    });
 });
 
